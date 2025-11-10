@@ -10,7 +10,7 @@ export default function Socials() {
                 flexDirection: 'column',
                 gap: 2,
                 position: "fixed",
-                bottom: 24,
+                bottom: 75,
                 right: 24,
             }}
         >
