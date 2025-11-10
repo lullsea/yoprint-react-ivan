@@ -41,7 +41,6 @@ const MainPage: React.FC = () => {
         }
     }, [query, dispatch])
 
-    // Update redux query state
     useEffect(() => {
         dispatch(setQuery(searchTerm));
     }, [searchTerm, dispatch]);

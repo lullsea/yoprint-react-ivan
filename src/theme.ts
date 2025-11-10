@@ -4,14 +4,14 @@ export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#90caf9", // light blue accent
+      main: "#90caf9",
     },
     secondary: {
-      main: "#f48fb1", // pink accent
+      main: "#f48fb1",
     },
     background: {
-      default: "#121212", // dark background
-      paper: "#1e1e1e",   // card backgrounds
+      default: "#121212",
+      paper: "#1e1e1e",
     },
     text: {
       primary: "#ffffff",
