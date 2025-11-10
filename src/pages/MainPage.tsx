@@ -4,13 +4,7 @@ import { fetchAnime, setQuery, setPage } from "../redux/animeSlice";
 import useDebounce from "../hooks/useDebounce";
 import AnimeCard from "../components/AnimeCard";
 import Pagination from "../components/Pagination";
-import {
-    Box,
-    CircularProgress,
-    Grid,
-    TextField,
-    Typography,
-} from "@mui/material";
+import { Box, CircularProgress, TextField, Typography } from "@mui/material";
 
 const MainPage: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -35,11 +29,11 @@ const MainPage: React.FC = () => {
 
     useEffect(() => {
         // Only set page to 1 when entering a new serach term
-        if(query !== prevQuery.current){
-            dispatch(setPage(1))
+        if (query !== prevQuery.current) {
+            dispatch(setPage(1));
             prevQuery.current = query;
         }
-    }, [query, dispatch])
+    }, [query, dispatch]);
 
     useEffect(() => {
         dispatch(setQuery(searchTerm));
@@ -79,25 +73,19 @@ const MainPage: React.FC = () => {
                     <Typography align="center" sx={{ mt: 3 }}>
                         No results found for “{debouncedSearch}”
                     </Typography>
-            )}
+                )}
 
-            {!loading &&
-            <Grid container spacing={3} sx={{ justifyContent: "center" }}>
-                {items.map((anime: any) => (
-                    <Grid
-                        item
-                        xs={12}
-                        sm={6}
-                        md={4}
-                        lg={3}
-                        key={anime.mal_id}
-                        sx={{ width: "23%", minWidth: 240 }}
-                    >
-                        <AnimeCard anime={anime} />
-                    </Grid>
-                ))}
-            </Grid>
-            }
+            {!loading && (
+                <Box sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: "center"}}>
+                    {items.map((anime: any) => (
+                        <Box
+                            sx={{width: '23%', minWidth: 240}}
+                        >
+                            <AnimeCard anime={anime} />
+                        </Box>
+                    ))}
+                </Box>
+            )}
 
             {total > 0 && (
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>

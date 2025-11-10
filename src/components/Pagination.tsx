@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { fetchAnime, setPage } from "../redux/animeSlice";
+import { setPage } from "../redux/animeSlice";
 import { Pagination as MuiPagination } from "@mui/material";
 
 const Pagination: React.FC = () => {

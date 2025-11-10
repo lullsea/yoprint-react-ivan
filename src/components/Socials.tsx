@@ -1,4 +1,3 @@
-import React from "react";
 import { Fab, Tooltip, Box } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
