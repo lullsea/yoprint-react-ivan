@@ -20,6 +20,7 @@ const Pagination: React.FC = () => {
             page={page}
             onChange={handleChange}
             color="primary"
+            size="small"
         />
     );
 };
