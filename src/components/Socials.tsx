@@ -11,7 +11,7 @@ export default function Socials() {
                 gap: 2,
                 position: "fixed",
                 bottom: 75,
-                right: 24,
+                right: 10,
             }}
         >
             <Tooltip title="Mail me" arrow placement="left">
